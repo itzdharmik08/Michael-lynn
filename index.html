@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michael Lynn | Elite Fitness Coaching & Transformation</title>
+  <meta name="description" content="Join IFBB Pro Michael Lynn for premium online and NYC-based fitness coaching.">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-content">
+      <a href="#" class="logo">Michael <span>Lynn</span></a>
+      <div class="nav-links">
+        <a href="#programs">Programs</a>
+        <a href="#about">About</a>
+        <a href="#results">Results</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="nav-actions">
+        <a href="#pricing" class="btn btn-primary" style="padding: 12px 24px; font-size: 14px;">Start Now</a>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#programs" onclick="closeMobileNav()">Programs</a>
+    <a href="#about" onclick="closeMobileNav()">About</a>
+    <a href="#results" onclick="closeMobileNav()">Results</a>
+    <a href="#testimonials" onclick="closeMobileNav()">Reviews</a>
+    <a href="#faq" onclick="closeMobileNav()">FAQ</a>
+    <a href="#contact" onclick="closeMobileNav()">Contact</a>
+    <a href="#pricing" class="btn btn-primary" style="margin-top: 16px;" onclick="closeMobileNav()">Start Now</a>
+  </div>
+
+  <!-- Section 1: Hero -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="hero-label">IFBB PRO COACH</span>
+          <h1 class="hero-headline">Transform Your Body<br>Like a Pro</h1>
+          <p class="hero-subheadline">Build muscle, burn fat, and achieve real results with expert coaching in NYC & online.</p>
+          <div class="hero-buttons">
+            <a href="#pricing" class="btn btn-primary" style="padding: 16px 28px; border-radius: 14px;">Start Your Transformation</a>
+            <a href="#contact" class="btn btn-secondary" style="border-radius: 14px; border-color: white;">Book Free Consultation</a>
+          </div>
+          <div class="hero-trust-signals">
+            <span class="signal-item"><i class="ph-fill ph-star" style="color: #FFD700; margin-right: 4px;"></i> 4.9 Rating</span>
+            <span class="signal-divider">|</span>
+            <span class="signal-item">200+ Transformations</span>
+            <span class="signal-divider">|</span>
+            <span class="signal-item">10+ Years Experience</span>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="./michael-lynn.jpg" alt="Michael Lynn - Fitness Coach" loading="eager">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section 2: Social Proof -->
+  <div class="social-proof-bar">
+    <div class="container social-proof-track">
+      <div class="proof-item">
+        <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=100&q=80&fit=crop" alt="Client">
+        <p>"Lost 20lbs in 12 weeks. Incredible coaching."</p>
+      </div>
+      <div class="proof-item">
+        <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=100&q=80&fit=crop" alt="Client">
+        <p>"Put on solid muscle. Best decision ever."</p>
+      </div>
+      <div class="proof-item">
+        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=100&q=80&fit=crop" alt="Client">
+        <p>"Finally hit my goal weight exactly."</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3: Programs -->
+  <section id="programs" class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="label">Services</span>
+        <h2>How We Train</h2>
+      </div>
+      <div class="service-grid">
+        <!-- Item 1: Text -->
+        <div class="service-text-card">
+          <span class="service-label">TRAINING</span>
+          <h3>Fat Loss Transformation</h3>
+          <p>Lose fat, build strength, and stay consistent with expert coaching perfectly tailored to you.</p>
+          <a href="#pricing" class="service-cta">Start Program &rarr;</a>
+        </div>
+        
+        <!-- Item 2: Image -->
+        <div class="service-image-card">
+          <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=800&q=80&fit=crop" alt="Online Coaching">
+          <div class="service-image-overlay">
+            <div class="service-image-content">
+              <span class="service-tag">Online Coaching</span>
+              <h4>12 Week Program</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Text -->
+        <div class="service-text-card">
+          <span class="service-label">PREP</span>
+          <h3>Contest Physique Prep</h3>
+          <p>An exact science to dial in your macros and training for the stage to ensure peak conditioning.</p>
+          <a href="#contact" class="service-cta">Learn More &rarr;</a>
+        </div>
+
+        <!-- Item 4: Image -->
+        <div class="service-image-card">
+          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80&fit=crop" alt="NYC In-Person">
+          <div class="service-image-overlay">
+            <div class="service-image-content">
+              <span class="service-tag">In-Person</span>
+              <h4>NYC 1-on-1 Sessions</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Online Coaching Program -->
+  <section class="online-coaching-section section">
+    <div class="container online-coaching-grid">
+
+      <!-- Left: Content -->
+      <div class="oc-content">
+        <span class="oc-label">ONLINE COACHING</span>
+        <h2 class="oc-headline">Train Anywhere with<br>Expert Online Coaching</h2>
+        <p class="oc-sub">Get a fully personalized workout and diet plan with weekly support and real results — no matter where you are in the world.</p>
+
+        <ul class="oc-benefits">
+          <li><i class="ph-fill ph-check-circle"></i> Custom workout plan tailored to your goals</li>
+          <li><i class="ph-fill ph-check-circle"></i> Personalized diet strategy & macros</li>
+          <li><i class="ph-fill ph-check-circle"></i> Weekly progress tracking & check-ins</li>
+          <li><i class="ph-fill ph-check-circle"></i> Direct coach support & accountability</li>
+          <li><i class="ph-fill ph-check-circle"></i> Continuous plan adjustments as you grow</li>
+        </ul>
+
+        <div class="oc-buttons">
+          <a href="#pricing" class="btn btn-primary" style="padding: 16px 28px; border-radius: 14px;">Start Online Coaching</a>
+          <a href="#contact" class="btn btn-secondary" style="border-radius: 14px;">Book Free Consultation</a>
+        </div>
+
+        <div class="oc-trust">
+          <span class="oc-trust-item"><i class="ph-fill ph-star" style="color:#FFD700;"></i> 4.9 Rating</span>
+          <span class="oc-trust-divider">|</span>
+          <span class="oc-trust-item"><i class="ph ph-users"></i> 200+ Clients Transformed</span>
+          <span class="oc-trust-divider">|</span>
+          <span class="oc-trust-item"><i class="ph ph-trophy"></i> IFBB Pro Coach</span>
+        </div>
+      </div>
+
+      <!-- Right: Visual -->
+      <div class="oc-visual">
+        <div class="oc-image-wrap">
+          <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=900&auto=format&fit=crop" alt="Online Coaching Visual">
+          <div class="oc-image-overlay"></div>
+          <div class="oc-floating-card">
+            <div class="oc-card-row">
+              <i class="ph-fill ph-check-circle" style="color: var(--accent);"></i>
+              <span>Week 1 Program Delivered</span>
+            </div>
+            <div class="oc-card-row">
+              <i class="ph-fill ph-check-circle" style="color: var(--accent);"></i>
+              <span>Macro Targets Set</span>
+            </div>
+            <div class="oc-card-row">
+              <i class="ph-fill ph-check-circle" style="color: var(--accent);"></i>
+              <span>Check-in Scheduled</span>
+            </div>
+            <div class="oc-card-progress">
+              <span>Progress</span>
+              <div class="oc-progress-bar"><div class="oc-progress-fill" style="width: 72%;"></div></div>
+              <span class="oc-progress-label">72%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 4: Pricing -->
+  <section id="pricing" class="section section-light">
+    <div class="container">
+      <div class="text-center">
+        <span class="label">Invest In Yourself</span>
+        <h2>Coaching Plans</h2>
+      </div>
+
+      <div class="pricing-toggle">
+        <button class="toggle-btn active" data-plan="monthly">Monthly</button>
+        <button class="toggle-btn" data-plan="3month">3 Months</button>
+        <button class="toggle-btn" data-plan="6month">6 Months</button>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-header">
+            <h3>Basic Plan</h3>
+            <div class="price-value" id="price-basic">$199<span>/mo</span></div>
+          </div>
+          <ul class="price-features">
+            <li><i class="ph ph-check"></i> Custom Workout Plan</li>
+            <li><i class="ph ph-check"></i> Basic Diet Guidance</li>
+            <li><i class="ph ph-check"></i> Bi-weekly Check-ins</li>
+            <li><i class="ph ph-check"></i> App Access</li>
+          </ul>
+          <a href="#" class="btn btn-secondary">Start Now</a>
+        </div>
+
+        <div class="price-card popular">
+          <div class="badge">Most Popular</div>
+          <div class="price-header">
+            <h3>Standard Plan</h3>
+            <div class="price-value" id="price-standard">$299<span>/mo</span></div>
+          </div>
+          <ul class="price-features">
+            <li><i class="ph ph-check"></i> Custom Workout Plan</li>
+            <li><i class="ph ph-check"></i> Precise Diet & Macros</li>
+            <li><i class="ph ph-check"></i> Weekly Check-ins</li>
+            <li><i class="ph ph-check"></i> Progress Tracking</li>
+            <li><i class="ph ph-check"></i> Daily Support</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Start Now</a>
+        </div>
+
+        <div class="price-card">
+          <div class="price-header">
+            <h3>Premium (1-on-1)</h3>
+            <div class="price-value" id="price-premium">$899<span>/mo</span></div>
+          </div>
+          <ul class="price-features">
+            <li><i class="ph ph-check"></i> Complete Online Coaching</li>
+            <li><i class="ph ph-check"></i> 4x In-Person NYC Sessions</li>
+            <li><i class="ph ph-check"></i> Video Form Review</li>
+            <li><i class="ph ph-check"></i> Direct Phone Access</li>
+          </ul>
+          <a href="#" class="btn btn-secondary">Start Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: About Coach -->
+  <section id="about" class="section">
+    <div class="container about-grid">
+      <div class="about-image">
+        <img src="./michael-lynn-about.jpg" alt="Michael Lynn">
+      </div>
+      <div class="about-content">
+        <span class="label">About</span>
+        <h2>Michael Lynn</h2>
+        <p>I didn't start with elite genetics. My physique was built through years of relentless dedication, trial and error, and studying the science of human performance.</p>
+        <p>Now as an IFBB Pro, my mission is to cut through the noise and provide you with the exact blueprint I use to achieve peak physical condition. No gimmicks, just hard work and an optimal strategy.</p>
+        <div class="credentials">
+          <div class="cred-item">
+            <h4>IFBB Pro</h4>
+            <p>Bodybuilder</p>
+          </div>
+          <div class="cred-item">
+            <h4>10+</h4>
+            <p>Years Exp.</p>
+          </div>
+          <div class="cred-item">
+            <h4>200+</h4>
+            <p>Clients</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: How It Works -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="text-center">
+        <span class="label">The Process</span>
+        <h2>How It Works</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Apply</h3>
+          <p>Fill out the intake form so I can understand your goals.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Get Custom Plan</h3>
+          <p>Receive your completely personalized training protocol.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Weekly Coaching</h3>
+          <p>Execute the plan and we tune it weekly via check-ins.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h3>Transform</h3>
+          <p>Achieve your final form and shatter your limitations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Results -->
+  <section id="results" class="section" style="background: var(--bg-primary);">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <h3 class="counter" data-target="200">0</h3>
+        <p>Clients Transformed</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="counter" data-target="10">0</h3>
+        <p>Years Experience</p>
+      </div>
+      <div class="stat-item">
+        <h3><span class="counter" data-target="4">0</span>.<span class="counter" data-target="9">0</span></h3>
+        <p>Star Rating</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: Transformation Results -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-6);">
+        <h2 style="font-size: 56px; margin-bottom: 8px;">200+ Transformations</h2>
+        <p style="color: #B3B3B3; font-size: 18px; margin: 0;">Real clients. Real results.</p>
+      </div>
+      
+      <div class="horizontal-scroll-container">
+        <!-- Card 1 -->
+        <div class="transform-card">
+          <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=800&auto=format&fit=crop" alt="Transformation Result">
+          <div class="transform-overlay">
+            <div class="transform-top">
+              <span class="transform-metric">-12 kg</span>
+              <span class="transform-label">FAT LOSS</span>
+            </div>
+            <div class="transform-bottom">
+              <p class="transform-text">Lost 12 kg in 16 weeks and built confidence again.</p>
+              <div class="transform-client">Age 34 &bull; Beginner</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="transform-card">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop" alt="Transformation Result">
+          <div class="transform-overlay">
+            <div class="transform-top">
+              <span class="transform-metric">+5 kg Muscle</span>
+              <span class="transform-label">MUSCLE GAIN</span>
+            </div>
+            <div class="transform-bottom">
+              <p class="transform-text">Packed on dense tissue with a strict caloric surplus.</p>
+              <div class="transform-client">Age 28 &bull; Intermediate</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="transform-card">
+          <img src="https://images.unsplash.com/photo-1526401485004-46910ecc8e51?q=80&w=800&auto=format&fit=crop" alt="Transformation Result">
+          <div class="transform-overlay">
+            <div class="transform-top">
+              <span class="transform-metric">Body Fat -10%</span>
+              <span class="transform-label">RECOMPOSITION</span>
+            </div>
+            <div class="transform-bottom">
+              <p class="transform-text">Shed stubborn fat while maintaining all strength.</p>
+              <div class="transform-client">Age 41 &bull; Advanced</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="transform-card">
+          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=800&auto=format&fit=crop" alt="Transformation Result">
+          <div class="transform-overlay">
+            <div class="transform-top">
+              <span class="transform-metric">1st Place</span>
+              <span class="transform-label">CONTEST PREP</span>
+            </div>
+            <div class="transform-bottom">
+              <p class="transform-text">Pushed past barriers to claim overall stage victory.</p>
+              <div class="transform-client">Age 24 &bull; Competitor</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 9: Testimonials -->
+  <section id="testimonials" class="section" style="background: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop') center/cover; position: relative;">
+    <div style="position: absolute; inset:0; background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(11,11,11,0.8) 50%, var(--bg-primary) 100%);"></div>
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="text-center">
+        <span class="label">Client Reviews</span>
+        <h2>What They Say</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+          <p class="testimonial-text">"Michael's approach is fully dialed in. If you follow what he says, you will transform. Period. Best investment I've made."</p>
+          <div class="author">
+            <img src="C:/Users/SANTOSH/.gemini/antigravity/brain/14cfaa07-bea8-4f1a-a6f3-56c7639663a3/testimonial_avatar_1776158668602.png" alt="James R.">
+            <div class="author-info">
+              <h4>James R.</h4>
+              <p>Dropped 20lbs of fat</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+          <p class="testimonial-text">"His attention to detail on form and macros is incredible. He's not just giving a template; it's true coaching."</p>
+          <div class="author">
+            <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=200&q=80&fit=crop" alt="Marcus T.">
+            <div class="author-info">
+              <h4>Marcus T.</h4>
+              <p>Competition Prep</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+          <p class="testimonial-text">"I struggled for years before hiring Michael. In 3 months I accomplished what I couldn't in 3 years."</p>
+          <div class="author">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80&fit=crop" alt="Alex H.">
+            <div class="author-info">
+              <h4>Alex H.</h4>
+              <p>Recomp Phase</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 10: FAQ -->
+  <section id="faq" class="section section-light">
+    <div class="container">
+      <div class="text-center">
+        <span class="label">Questions</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Is this suitable for beginners?</h3>
+            <i class="ph ph-plus faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely. While I coach IFBB Pros, the majority of my clients are everyday people looking to make a massive change.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do I need an expensive gym membership?</h3>
+            <i class="ph ph-plus faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>A standard gym is recommended. However, if you only have a home gym, I will customize the entire block to utilize what you have.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How fast will I see results?</h3>
+            <i class="ph ph-plus faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>If you adhere 100% to the plan, visual changes often begin within 2-3 weeks, with major transformations visible by weeks 10-12.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do I have to eat bland food?</h3>
+            <i class="ph ph-plus faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>No. I utilize sustainable dieting practices. Macros will be tailored and you will have flexibility as long as targets are hit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 11: Contact Form -->
+  <section id="contact" class="section section-light">
+    <div class="container">
+      <div class="text-center">
+        <span class="label">Get In Touch</span>
+        <h2>Start Your Journey</h2>
+        <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto var(--space-6);">Fill out the form below and I'll get back to you within 24 hours to discuss your fitness goals.</p>
+      </div>
+      
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="ph-fill ph-envelope"></i>
+            </div>
+            <h4>Email</h4>
+            <p>info@michaellynn.com</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="ph-fill ph-phone"></i>
+            </div>
+            <h4>Phone</h4>
+            <p>+1 (555) 123-4567</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="ph-fill ph-map-pin"></i>
+            </div>
+            <h4>Location</h4>
+            <p>New York, NY</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="ph-fill ph-clock"></i>
+            </div>
+            <h4>Response Time</h4>
+            <p>Within 24 hours</p>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <form id="contactForm" class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (555) 000-0000">
+              </div>
+              <div class="form-group">
+                <label for="goal">Your Goal *</label>
+                <select id="goal" name="goal" class="form-input" required>
+                  <option value="">Select your goal...</option>
+                  <option value="weight-loss">Weight Loss</option>
+                  <option value="muscle-gain">Muscle Building</option>
+                  <option value="contest-prep">Contest Prep</option>
+                  <option value="transformation">Complete Transformation</option>
+                  <option value="maintenance">Maintenance</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Tell Me About Yourself *</label>
+              <textarea id="message" name="message" class="form-input form-textarea" placeholder="Share your fitness history, current routine, diet, and what you hope to achieve..." rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-submit">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading" style="display: none;"><i class="ph ph-spinner ph-spin"></i> Sending...</span>
+              <span class="btn-success" style="display: none;"><i class="ph ph-check-circle"></i> Message Sent!</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 12: Final CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Your Transformation Starts Today</h2>
+      <p>Limited coaching slots available.</p>
+      <a href="#pricing" class="btn btn-primary" style="margin-top: var(--space-4);">Join Coaching Now</a>
+    </div>
+  </section>
+
+  <!-- Section 13: Footer -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="#" class="footer-logo">Michael <span>Lynn</span></a>
+          <p style="font-size: 14px;">Elite fitness coaching based in NYC, changing lives worldwide.</p>
+          <div class="social-links">
+            <a href="#"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#"><i class="ph ph-tiktok-logo"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#about">About Michael</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#transformations">Gallery</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Information</h4>
+          <ul>
+            <li><a href="mailto:info@michaellynn.com">info@michaellynn.com</a></li>
+            <li><a href="#">New York, NY</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Michael Lynn Fitness. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <div class="whatsapp-float" id="whatsappFloat">
+    <button class="whatsapp-btn" onclick="toggleWhatsAppPopup()">
+      <i class="ph-fill ph-whatsapp-logo"></i>
+    </button>
+  </div>
+
+  <!-- WhatsApp Popup -->
+  <div class="whatsapp-popup" id="whatsappPopup">
+    <div class="whatsapp-popup-header">
+      <div class="whatsapp-popup-avatar">
+        <img src="./michael-lynn-about.jpg" alt="Michael Lynn">
+        <span class="whatsapp-status"></span>
+      </div>
+      <div class="whatsapp-popup-info">
+        <h4>Michael Lynn</h4>
+        <p>IFBB Pro Coach</p>
+      </div>
+      <button class="whatsapp-close" onclick="toggleWhatsAppPopup()">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+    <div class="whatsapp-popup-body">
+      <div class="whatsapp-message received">
+        <p>Hi there! 👋 I'm Michael. How can I help you achieve your fitness goals today?</p>
+        <span class="whatsapp-time">Just now</span>
+      </div>
+    </div>
+    <div class="whatsapp-popup-footer">
+      <a href="https://wa.me/15551234567?text=Hi%20Michael%2C%20I'm%20interested%20in%20your%20coaching%20program" target="_blank" class="whatsapp-start-chat">
+        <i class="ph-fill ph-chat-circle-text"></i>
+        Start Chat
+      </a>
+    </div>
+  </div>
+
+  <!-- Mobile Sticky CTA -->
+  <div class="mobile-sticky-cta">
+    <a href="#pricing" class="btn btn-primary">Start Now</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
