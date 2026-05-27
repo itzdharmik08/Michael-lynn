@@ -2522,3 +2522,297 @@ select.form-input {
     font-size: 28px;
   }
 }
+
+/* ==========================================
+   Appointment Booking Custom System Styles
+   ========================================== */
+.time-slots-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.time-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
+  gap: 10px;
+  width: 100%;
+  min-height: 52px;
+}
+
+.slots-placeholder {
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-style: italic;
+  padding: 14px 0;
+  grid-column: 1 / -1;
+  text-align: left;
+  border-left: 2px dashed var(--border);
+  padding-left: 12px;
+}
+
+.time-slot-btn {
+  background: var(--bg-surface-lighter);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  padding: 10px 6px;
+  border-radius: 12px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  position: relative;
+  outline: none;
+}
+
+.time-slot-btn:hover:not(:disabled) {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 107, 0, 0.15);
+}
+
+.time-slot-btn.selected {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 20px rgba(255, 107, 0, 0.4) !important;
+  transform: translateY(-2px) scale(1.02);
+}
+
+.time-slot-btn.selected .slot-status {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.time-slot-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  background: rgba(30, 30, 30, 0.4);
+  border-color: transparent;
+  color: var(--text-secondary);
+  text-decoration: line-through;
+}
+
+.time-slot-btn .slot-time {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.time-slot-btn .slot-status {
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.time-slot-btn.available .slot-status {
+  color: #25D366; /* Bright WhatsApp Green for availability */
+}
+
+.time-slot-btn.partial .slot-status {
+  color: #FF9000; /* Vivid warning orange for '1 slot left' */
+}
+
+.time-slot-btn.full .slot-status {
+  color: #FF3B30; /* Clear booking red */
+}
+
+/* Beautiful custom calendar indicator matching our brand's vibrant orange */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(53%) sepia(85%) saturate(2250%) hue-rotate(1deg) brightness(101%) contrast(106%);
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* Dynamic Slots Loading Spinner */
+.slots-loader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  font-size: 14px;
+  grid-column: 1 / -1;
+  padding: 14px 0;
+}
+
+.slots-loader i {
+  font-size: 18px;
+}
+
+/* 5-Dot Dynamic Visual Indicators */
+.slot-indicators {
+  display: flex;
+  gap: 4px;
+  margin-top: 5px;
+  justify-content: center;
+  width: 100%;
+}
+
+.indicator-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.3s ease;
+}
+
+/* Taken spot indicator */
+.indicator-dot.taken {
+  background: #FF9000; /* Vivid warning orange for taken spots */
+  border-color: #FF9000;
+}
+
+/* When slot button is active/selected */
+.time-slot-btn.selected .indicator-dot {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.time-slot-btn.selected .indicator-dot.taken {
+  background: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+}
+
+/* Fully Booked red status indicators */
+.time-slot-btn.full .indicator-dot.taken.full {
+  background: #FF3B30;
+  border-color: #FF3B30;
+}
+
+/* Expired greyed-out dots */
+.indicator-dot.expired {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Custom Popup Modal Styles */
+.custom-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 11, 11, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.modal-card {
+  position: relative;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  width: 90%;
+  max-width: 440px;
+  padding: 40px var(--space-4);
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 40px rgba(255, 107, 0, 0.1);
+  transform: scale(0.9) translateY(20px);
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 2001;
+}
+
+.custom-modal.active .modal-card {
+  transform: scale(1) translateY(0);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 22px;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  color: var(--accent);
+  transform: rotate(90deg);
+}
+
+.modal-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-size: 40px;
+  transition: all 0.3s ease;
+}
+
+/* Success status popup */
+.custom-modal.success .modal-icon {
+  background: rgba(37, 211, 102, 0.1);
+  color: #25D366;
+  border: 1px solid rgba(37, 211, 102, 0.2);
+}
+
+/* Error / Warning status popup */
+.custom-modal.error .modal-icon {
+  background: rgba(255, 59, 48, 0.1);
+  color: #FF3B30;
+  border: 1px solid rgba(255, 59, 48, 0.2);
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  font-family: var(--font-heading);
+}
+
+.modal-message {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.modal-action-btn {
+  width: 100%;
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-action-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
