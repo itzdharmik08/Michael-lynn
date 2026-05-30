@@ -56,9 +56,22 @@ document.addEventListener('DOMContentLoaded', () => {
         animateCounters();
         observer.disconnect();
       }
-    }, { threshold: 0.5 });
+    }, { threshold: 0.3 });
     observer.observe(statsSection);
   }
+
+  // Scroll Reveal Animations
+  const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  revealElements.forEach(el => revealObserver.observe(el));
 
   // Pricing Toggle Logic
   const toggleBtns = document.querySelectorAll('.toggle-btn');
@@ -66,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const priceStandard = document.getElementById('price-standard');
   const pricePremium = document.getElementById('price-premium');
 
-  const basePrices = { basic: 199, standard: 299, premium: 899 };
+  const basePrices = { basic: 150, standard: 299, premium: 899 };
 
   toggleBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -116,26 +129,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Gallery Filters
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const galleryItems = document.querySelectorAll('.gallery-item');
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filter = btn.getAttribute('data-filter');
-
-      galleryItems.forEach(item => {
-        if (filter === 'all' || item.getAttribute('data-category') === filter) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    });
-  });
 
   // --- APPOINTMENT SYSTEM INTERACTIVE LOGIC ---
   const dateInput = document.getElementById('appointmentDate');
@@ -332,108 +325,82 @@ document.addEventListener('DOMContentLoaded', () => {
     customModal.querySelector('.modal-overlay').addEventListener('click', hideAlert);
   }
 
-  // Appointment Form Submit Handling
+  // Contact Form Submit Handling — Web3Forms
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      // Double-check time slot selection
-      if (!selectedTimeInput.value) {
-        showAlert('Selection Required', 'Please select an available time slot before submitting.', 'error');
-        return;
-      }
-      
       const submitBtn = contactForm.querySelector('.btn-submit');
       const btnText = submitBtn.querySelector('.btn-text');
       const btnLoading = submitBtn.querySelector('.btn-loading');
       const btnSuccess = submitBtn.querySelector('.btn-success');
-      
-      // Show loading/booking state
+
+      // Show loading state
       btnText.style.display = 'none';
       btnLoading.style.display = 'flex';
       submitBtn.disabled = true;
 
-      const selectedDate = dateInput.value;
-      const selectedTime = selectedTimeInput.value;
-      
-      const isRealAPI = WEB_APP_URL && WEB_APP_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
-      let success = false;
-      let errorMsg = 'Failed to book appointment. Please try again.';
+      try {
+        const formData = {
+          access_key: '326c4fd1-d979-4dce-89f3-a44bb19feec1',
+          name: contactForm.name.value,
+          email: contactForm.email.value,
+          phone: contactForm.phone ? contactForm.phone.value || 'Not provided' : 'Not provided',
+          goal: contactForm.goal.value,
+          message: contactForm.message.value,
+          subject: 'New Coaching Intake — Michael Lynn Website'
+        };
 
-      if (isRealAPI) {
-        // Send GET request to Google Apps Script to bypass POST CORS redirect limitations
-        try {
-          const formData = new FormData(contactForm);
-          const queryParams = new URLSearchParams(formData).toString();
-          const response = await fetch(`${WEB_APP_URL}?${queryParams}`, {
-            method: 'GET',
-            mode: 'cors'
-          });
-          const result = await response.json();
-          if (result.status === 'success') {
-            success = true;
-          } else {
-            errorMsg = result.message || errorMsg;
-          }
-        } catch (err) {
-          console.error('API submission error:', err);
-          errorMsg = 'Connection to booking server lost. Please try again.';
-        }
-      } else {
-        // Simulation mode check for instant visual verification
-        await new Promise(resolve => setTimeout(resolve, 1800));
-        
-        const emailInput = contactForm.querySelector('#email').value.trim().toLowerCase();
-        
-        // 1. Check if this same user (email) already has a booking on the same day in simulation
-        const emailExists = mockBookings.some(b => b.date === selectedDate && b.email === emailInput);
-        if (emailExists) {
-          success = false;
-          errorMsg = 'You have already booked an appointment for this date. Only one appointment per day is allowed.';
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          // Show success button state
+          btnLoading.style.display = 'none';
+          btnSuccess.style.display = 'flex';
+          submitBtn.style.background = '#25D366';
+
+          // After brief delay, show success popup and reset
+          setTimeout(() => {
+            showAlert(
+              '🏆 Application Sent!',
+              'Coach Mike has received your intake request and will reach out within 24 hours to schedule your free consultation.',
+              'success'
+            );
+            contactForm.reset();
+            btnSuccess.style.display = 'none';
+            btnText.style.display = 'inline';
+            submitBtn.disabled = false;
+            submitBtn.style.background = '';
+          }, 1200);
         } else {
-          // Count in-memory bookings for double booking check
-          const activeBookings = mockBookings.filter(b => b.date === selectedDate && b.time === selectedTime).length;
-          if (activeBookings >= MAX_BOOKINGS_PER_SLOT) {
-            success = false;
-            errorMsg = 'This slot was just booked by someone else! Please choose another time.';
-          } else {
-            // Record booking locally in simulation database
-            mockBookings.push({
-              date: selectedDate,
-              time: selectedTime,
-              email: emailInput
-            });
-            success = true;
-          }
+          throw new Error(result.message || 'Submission failed. Please try again.');
         }
-      }
-      
-      // Update submitting feedback
-      btnLoading.style.display = 'none';
-      
-      if (success) {
-        btnSuccess.style.display = 'flex';
-        submitBtn.style.background = '#25D366';
-        
-        // Reset and refresh form after visual delay and show success popup
-        setTimeout(() => {
-          showAlert('Booking Confirmed!', 'Your appointment is booked and locked. We have sent the confirmation to your email!', 'success');
-          contactForm.reset();
-          loadAvailableSlots(''); // Clear slots view
-          btnSuccess.style.display = 'none';
-          btnText.style.display = 'inline';
-          submitBtn.disabled = false;
-          submitBtn.style.background = '';
-        }, 1200);
-      } else {
-        // Friendly custom modal popup for error (like same-day restriction) and reload slots list
-        showAlert('Booking Restricted', errorMsg, 'error');
+
+      } catch (error) {
+        console.error('Form submission error:', error);
+        btnLoading.style.display = 'none';
         btnText.style.display = 'inline';
         submitBtn.disabled = false;
-        await loadAvailableSlots(selectedDate);
+
+        showAlert(
+          'Submission Failed',
+          error.message || 'Something went wrong. Please try again or contact Coach Mike directly on WhatsApp.',
+          'error'
+        );
       }
     });
   }
+
+
 
   // WhatsApp Popup Toggle
   window.toggleWhatsAppPopup = function() {
@@ -561,4 +528,26 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+  // Select Training Type from Pricing Cards
+  window.selectTrainingType = function(type) {
+    const trainingTypeSelect = document.getElementById('training-type');
+    if (trainingTypeSelect) {
+      trainingTypeSelect.value = type;
+      
+      // Trigger focus style and focus element without jumping scroll
+      trainingTypeSelect.parentElement.classList.add('focused');
+      trainingTypeSelect.focus({ preventScroll: true });
+      
+      // Trigger visual highlight pulse animation
+      trainingTypeSelect.classList.remove('field-highlight-pulse');
+      void trainingTypeSelect.offsetWidth; // Force repaint
+      trainingTypeSelect.classList.add('field-highlight-pulse');
+      
+      // Cleanup animation class after completion
+      setTimeout(() => {
+        trainingTypeSelect.classList.remove('field-highlight-pulse');
+      }, 2500);
+    }
+  };
+
 });

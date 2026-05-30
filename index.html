@@ -4,29 +4,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Michael Lynn | Elite Fitness Coaching & Transformation</title>
-  <meta name="description" content="Join IFBB Pro Michael Lynn for premium online and NYC-based fitness coaching.">
+  <title>Michael Lynn | IFBB Pro Elite Coaching & Transformation</title>
+  <meta name="description"
+    content="Get elite fitness coaching, custom diet protocols, and bodybuilding contest prep from IFBB Pro Michael Lynn. NYC & Online.">
   <link rel="stylesheet" href="index.css">
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css">
 </head>
 
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="container nav-content">
-      <a href="#" class="logo">Michael <span>Lynn</span></a>
-      <div class="nav-links">
-        <a href="#programs">Programs</a>
-        <a href="#about">About</a>
-        <a href="#results">Results</a>
-        <a href="#testimonials">Reviews</a>
-        <a href="#faq">FAQ</a>
+  <nav class="sg-navbar" id="navbar">
+    <div class="sg-nav-container">
+      <a href="#hero" class="sg-logo-link">
+        <img src="images/logo.png" alt="Michael Lynn | Stay Strong" class="sg-logo-img">
+      </a>
+      <div class="sg-nav-menu">
+        <a href="#story" class="sg-nav-link">About</a>
+        <a href="#testimonials" class="sg-nav-link">Reviews</a>
+        <a href="#pricing" class="sg-nav-link">Programs</a>
+        <a href="#faq" class="sg-nav-link">FAQ</a>
+
       </div>
-      <div class="nav-actions">
-        <a href="#pricing" class="btn btn-primary" style="padding: 12px 24px; font-size: 14px;">Start Now</a>
+      <div class="sg-nav-actions">
+        <a href="https://www.instagram.com/mikelynnifbbpro/" target="_blank" rel="noopener noreferrer"
+          class="sg-nav-instagram" aria-label="Instagram">
+          <i class="ph ph-instagram-logo" style="font-size: 20px;"></i>
+        </a>
+        <a href="#contact" class="sg-nav-btn">Book a Consult</a>
       </div>
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+      <button class="sg-mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
         <i class="ph ph-list"></i>
       </button>
     </div>
@@ -34,612 +46,1094 @@
 
   <!-- Mobile Navigation -->
   <div class="mobile-nav" id="mobileNav">
-    <a href="#programs" onclick="closeMobileNav()">Programs</a>
-    <a href="#about" onclick="closeMobileNav()">About</a>
-    <a href="#results" onclick="closeMobileNav()">Results</a>
-    <a href="#testimonials" onclick="closeMobileNav()">Reviews</a>
+    <a href="#story" onclick="closeMobileNav()">About</a>
+    <a href="#pricing" onclick="closeMobileNav()">Pricing</a>
+    <a href="#testimonials" onclick="closeMobileNav()">Testimonials</a>
+    <a href="#gallery" onclick="closeMobileNav()">Gallery</a>
     <a href="#faq" onclick="closeMobileNav()">FAQ</a>
     <a href="#contact" onclick="closeMobileNav()">Contact</a>
-    <a href="#pricing" class="btn btn-primary" style="margin-top: 16px;" onclick="closeMobileNav()">Start Now</a>
+    <a href="#contact" class="btn btn-primary"
+      style="margin-top: 16px; background: var(--orange); border-radius: 4px; box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);"
+      onclick="closeMobileNav()">Free Intro</a>
   </div>
 
-  <!-- Section 1: Hero -->
-  <header class="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <div class="hero-content">
-          <span class="hero-label">IFBB PRO COACH</span>
-          <h1 class="hero-headline">Transform Your Body<br>Like a Pro</h1>
-          <p class="hero-subheadline">Build muscle, burn fat, and achieve real results with expert coaching in NYC &
-            online.</p>
-          <div class="hero-buttons">
-            <a href="#pricing" class="btn btn-primary" style="padding: 16px 28px; border-radius: 14px;">Start Your
-              Transformation</a>
-            <a href="#contact" class="btn btn-secondary" style="border-radius: 14px; border-color: white;">Book Free
-              Consultation</a>
-          </div>
-          <div class="hero-trust-signals">
-            <span class="signal-item"><i class="ph-fill ph-star" style="color: #FFD700; margin-right: 4px;"></i> 4.9
-              Rating</span>
-            <span class="signal-divider">|</span>
-            <span class="signal-item">200+ Transformations</span>
-            <span class="signal-divider">|</span>
-            <span class="signal-item">10+ Years Experience</span>
-          </div>
+  <!-- Hero Section -->
+  <header id="hero" class="sg-hero">
+    <div class="sg-hero-bg"></div>
+    <div class="sg-hero-overlay"></div>
+    <div class="sg-hero-container">
+      <p class="sg-hero-welcome">IFBB Pro Bodybuilder & NYC Personal Trainer</p>
+      <h1 class="sg-hero-headline">
+        Train with <br> New York's Most Dedicated
+        <span class="highlight"> IFBB Pro</span>
+      </h1>
+      <p class="sg-hero-subheadline">Every client a priority. In-person in Manhattan or online worldwide real coaching,
+        no
+        shortcuts.
+      </p>
+      <div class="sg-hero-buttons">
+        <a href="#testimonials" class="sg-btn-primary">Book Your Intro Session</a>
+        <a href="#features" class="sg-btn-secondary">Explore Online Coaching</a>
+      </div>
+      <div class="sg-hero-trust">
+        <div class="sg-avatar-stack">
+          <img src="images/r1.jpg" alt="Member Avatar" class="sg-avatar-img">
+          <img src="images/r2.jpg" alt="Member Avatar" class="sg-avatar-img">
+          <img src="images/r3.jpg" alt="Member Avatar" class="sg-avatar-img">
+          <img src="images/r4.jpg" alt="Member Avatar" class="sg-avatar-img">
+          <img src="images/r5.jpg" alt="Member Avatar" class="sg-avatar-img">
+          <div class="sg-avatar-more">+50</div>
         </div>
-        <div class="hero-image">
-          <img src="images/michael-lynn.jpg" alt="Michael Lynn - Fitness Coach" loading="eager">
+        <div class="sg-trust-rating">
+          <div class="sg-rating-stars">
+            <i class="ph ph-star ph-fill"></i>
+            <i class="ph ph-star ph-fill"></i>
+            <i class="ph ph-star ph-fill"></i>
+            <i class="ph ph-star ph-fill"></i>
+            <i class="ph ph-star ph-fill"></i>
+          </div>
+          <p class="sg-trust-text"><span>200+</span> members strong</p>
         </div>
       </div>
     </div>
+    <button class="sg-scroll-down" onclick="document.querySelector('#programs').scrollIntoView({ behavior: 'smooth' })"
+      aria-label="Scroll down">
+      <i class="ph ph-chevron-down"></i>
+    </button>
   </header>
 
-  <!-- Section 2: Social Proof -->
+  <!-- Social Proof Bar -->
   <div class="social-proof-bar">
-    <div class="container social-proof-track">
+    <div class="container social-proof-track reveal">
       <div class="proof-item">
-        <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=100&q=80&fit=crop" alt="Client">
-        <p>"Lost 20lbs in 12 weeks. Incredible coaching."</p>
+        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=100&q=80&fit=crop"
+          alt="Client Transformation">
+        <p>"This man’s muscles are truly legendary 💪 unbelievable muscle perfection"</p>
       </div>
       <div class="proof-item">
-        <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=100&q=80&fit=crop" alt="Client">
-        <p>"Put on solid muscle. Best decision ever."</p>
+        <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=100&q=80&fit=crop"
+          alt="Client Transformation">
+        <p>"Michael, you don't look llke you had to deal with a slipped disc, you look like you just won a Bodybuilding
+          contest."</p>
       </div>
       <div class="proof-item">
-        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=100&q=80&fit=crop" alt="Client">
-        <p>"Finally hit my goal weight exactly."</p>
+        <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=100&q=80&fit=crop"
+          alt="Client Transformation">
+        <p>"Wow!!! Incredible Back Muscles!!! You Look Amazing Handsome Muscled Man Mike!!! Glad You Are Feeling Better
+          And Back At It!!!"</p>
       </div>
     </div>
   </div>
 
-  <!-- Section 3: Programs -->
-  <section id="programs" class="section">
+  <!-- About Section -->
+  <section id="story" class="sg-about-section">
     <div class="container">
-      <div class="text-center">
-        <span class="label">Services</span>
-        <h2>How We Train</h2>
-      </div>
-      <div class="service-grid">
-        <!-- Item 1: Text -->
-        <div class="service-text-card">
-          <span class="service-label">TRAINING</span>
-          <h3>Fat Loss Transformation</h3>
-          <p>Lose fat, build strength, and stay consistent with expert coaching perfectly tailored to you.</p>
-          <a href="#pricing" class="service-cta">Start Program &rarr;</a>
-        </div>
+      <div class="sg-about-grid">
 
-        <!-- Item 2: Image -->
-        <div class="service-image-card">
-          <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=800&q=80&fit=crop"
-            alt="Online Coaching">
-          <div class="service-image-overlay">
-            <div class="service-image-content">
-              <span class="service-tag">Online Coaching</span>
-              <h4>12 Week Program</h4>
+        <!-- Left: Image with decorative elements -->
+        <div class="sg-about-media reveal-left">
+          <div class="sg-about-img-wrapper">
+            <div class="sg-about-orange-block"></div>
+            <img src="images/about.heic" alt="Michael Lynn Coaching Community" class="sg-about-img">
+            <div class="sg-about-badge">
+              <span class="sg-badge-year">2021</span>
+              <span class="sg-badge-sub">IFBB Tampa Pro</span>
             </div>
           </div>
         </div>
 
-        <!-- Item 3: Text -->
-        <div class="service-text-card">
-          <span class="service-label">PREP</span>
-          <h3>Contest Physique Prep</h3>
-          <p>An exact science to dial in your macros and training for the stage to ensure peak conditioning.</p>
-          <a href="#contact" class="service-cta">Learn More &rarr;</a>
-        </div>
+        <!-- Right: Content -->
+        <div class="sg-about-content reveal-right">
+          <p class="sg-about-label">About</p>
+          <h2 class="sg-about-headline">MICHAEL LYNN</h2>
 
-        <!-- Item 4: Image -->
-        <div class="service-image-card">
-          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80&fit=crop"
-            alt="NYC In-Person">
-          <div class="service-image-overlay">
-            <div class="service-image-content">
-              <span class="service-tag">In-Person</span>
-              <h4>NYC 1-on-1 Sessions</h4>
+          <h3 class="sg-about-label">IFBB Pro. NYC Trainer. Obsessed with Results.</h3>
+          <p class="sg-about-body">
+            I've competed at the highest level of natural bodybuilding, earning my <strong>IFBB Pro</strong> card and
+            standing on stage
+            at the New York Pro, Chicago Pro, and Tampa Pro. <strong>But my real education came from 10+ years in the
+              gym,</strong>
+            training real people with real lives.
+          </p>
+          <p class="sg-about-body">
+            Based in <strong>Manhattan</strong>, I run 40 to 50 training sessions every single week. My clients range
+            from first-timers
+            who've never touched a barbell to competitive bodybuilders chasing a pro card. What they all have in common:
+            they're serious about change.
+          </p>
+          <p class="sg-about-body">
+            I built my reputation one result at a time. Just <strong>dedication</strong>, <strong>discipline</strong>,
+            and
+            <strong>determination</strong> the same three D's I've lived by my entire career.
+          </p>
+
+          <!-- Stats row -->
+          <div class="sg-about-stats">
+            <div class="sg-about-stat">
+              <span class="sg-stat-value">IFBB Pro</span>
+              <span class="sg-stat-label">Bodybuilder</span>
+            </div>
+            <div class="sg-about-stat">
+              <span class="sg-stat-value">10+</span>
+              <span class="sg-stat-label">Years Exp.</span>
+            </div>
+            <div class="sg-about-stat">
+              <span class="sg-stat-value">200+</span>
+              <span class="sg-stat-label">Clients</span>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Section: Online Coaching Program -->
-  <section class="online-coaching-section section">
-    <div class="container online-coaching-grid">
-
-      <!-- Left: Content -->
-      <div class="oc-content">
-        <span class="oc-label">ONLINE COACHING</span>
-        <h2 class="oc-headline">Train Anywhere with<br>Expert Online Coaching</h2>
-        <p class="oc-sub">Get a fully personalized workout and diet plan with weekly support and real results — no
-          matter where you are in the world.</p>
-
-        <ul class="oc-benefits">
-          <li><i class="ph-fill ph-check-circle"></i> Custom workout plan tailored to your goals</li>
-          <li><i class="ph-fill ph-check-circle"></i> Personalized diet strategy & macros</li>
-          <li><i class="ph-fill ph-check-circle"></i> Weekly progress tracking & check-ins</li>
-          <li><i class="ph-fill ph-check-circle"></i> Direct coach support & accountability</li>
-          <li><i class="ph-fill ph-check-circle"></i> Continuous plan adjustments as you grow</li>
-        </ul>
-
-        <div class="oc-buttons">
-          <a href="#pricing" class="btn btn-primary" style="padding: 16px 28px; border-radius: 14px;">Start Online
-            Coaching</a>
-          <a href="#contact" class="btn btn-secondary" style="border-radius: 14px;">Book Free Consultation</a>
-        </div>
-
-        <div class="oc-trust">
-          <span class="oc-trust-item"><i class="ph-fill ph-star" style="color:#FFD700;"></i> 4.9 Rating</span>
-          <span class="oc-trust-divider">|</span>
-          <span class="oc-trust-item"><i class="ph ph-users"></i> 200+ Clients Transformed</span>
-          <span class="oc-trust-divider">|</span>
-          <span class="oc-trust-item"><i class="ph ph-trophy"></i> IFBB Pro Coach</span>
-        </div>
-      </div>
-
-      <!-- Right: Visual -->
-      <div class="oc-visual">
-        <div class="oc-image-wrap">
-          <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=900&auto=format&fit=crop"
-            alt="Online Coaching Visual">
-          <div class="oc-image-overlay"></div>
-          <div class="oc-floating-card">
-            <div class="oc-card-row">
-              <i class="ph-fill ph-check-circle" style="color: var(--accent);"></i>
-              <span>Week 1 Program Delivered</span>
-            </div>
-            <div class="oc-card-row">
-              <i class="ph-fill ph-check-circle" style="color: var(--accent);"></i>
-              <span>Macro Targets Set</span>
-            </div>
-            <div class="oc-card-row">
-              <i class="ph-fill ph-check-circle" style="color: var(--accent);"></i>
-              <span>Check-in Scheduled</span>
-            </div>
-            <div class="oc-card-progress">
-              <span>Progress</span>
-              <div class="oc-progress-bar">
-                <div class="oc-progress-fill" style="width: 72%;"></div>
+          <!-- Competition Achievement Cards -->
+          <div class="sg-comp-cards">
+            <div class="sg-comp-card">
+              <i class="ph ph-trophy sg-comp-icon"></i>
+              <div class="sg-comp-info">
+                <span class="sg-comp-year">2017</span>
+                <span class="sg-comp-title">IFBB New York Pro</span>
               </div>
-              <span class="oc-progress-label">72%</span>
+            </div>
+            <div class="sg-comp-card">
+              <i class="ph ph-trophy sg-comp-icon"></i>
+              <div class="sg-comp-info">
+                <span class="sg-comp-year">2017</span>
+                <span class="sg-comp-title">IFBB Chicago Pro</span>
+              </div>
+            </div>
+            <div class="sg-comp-card">
+              <i class="ph ph-trophy sg-comp-icon"></i>
+              <div class="sg-comp-info">
+                <span class="sg-comp-year">2015</span>
+                <span class="sg-comp-title">NPC Nationals – Heavyweight</span>
+              </div>
+            </div>
+            <div class="sg-comp-card">
+              <i class="ph ph-trophy sg-comp-icon"></i>
+              <div class="sg-comp-info">
+                <span class="sg-comp-year">2014</span>
+                <span class="sg-comp-title">NPC Eastern USA – Heavyweight</span>
+              </div>
+            </div>
+            <div class="sg-comp-card">
+              <i class="ph ph-trophy sg-comp-icon"></i>
+              <div class="sg-comp-info">
+                <span class="sg-comp-year">2006</span>
+                <span class="sg-comp-title">NPC Eastern USA – Light Heavyweight</span>
+              </div>
+            </div>
+            <div class="sg-comp-card">
+              <i class="ph ph-crown sg-comp-icon"></i>
+              <div class="sg-comp-info">
+                <span class="sg-comp-year">Classic</span>
+                <span class="sg-comp-title">Classic Physique Over 40 Overall Champion</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="sg-features-section" id="features">
+    <div class="container sg-features-container">
+      <div class="sg-features-grid">
+        <!-- Feature Card 1: Growth & Comfort -->
+        <div class="sg-feature-card reveal-scale">
+          <div class="sg-feature-icon-wrapper">
+            <i class="ph ph-trend-up"></i>
+          </div>
+          <h3 class="sg-feature-title">Growth & Comfort</h3>
+          <p class="sg-feature-desc">
+            Real transformation happens outside your comfort zone. Every rep, every session, every meal prep is a choice
+            to grow stronger, not stay comfortable.
+          </p>
+        </div>
+
+        <!-- Feature Card 2: Elite Strategy -->
+        <div class="sg-feature-card reveal-scale">
+          <div class="sg-feature-icon-wrapper">
+            <i class="ph ph-sliders"></i>
+          </div>
+          <h3 class="sg-feature-title">Elite Strategy</h3>
+          <p class="sg-feature-desc">
+            No cookie-cutter routines. Your hypertrophy training plans, custom macros, and caloric configurations are
+            tailored dynamically to your direct biomechanics.
+          </p>
+        </div>
+
+        <!-- Feature Card 3: Elite Community -->
+        <div class="sg-feature-card reveal-scale">
+          <div class="sg-feature-icon-wrapper">
+            <i class="ph ph-users-three"></i>
+          </div>
+          <h3 class="sg-feature-title">Elite Community</h3>
+          <p class="sg-feature-desc">
+            Join a high-performance circle of like-minded individuals. A relentless culture built on shared sweat, high
+            standard accountability, and massive wins.
+          </p>
+        </div>
+
+        <!-- Feature Card 4: IFBB Pro Coaching -->
+        <div class="sg-feature-card reveal-scale">
+          <div class="sg-feature-icon-wrapper">
+            <i class="ph ph-trophy"></i>
+          </div>
+          <h3 class="sg-feature-title">IFBB Pro Coaching</h3>
+          <p class="sg-feature-desc">
+            Direct 1-on-1 access to a verified IFBB Pro. Benefit from elite-level knowledge on training mechanics,
+            posing, and peaking protocols that deliver stage-level conditioning.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews & Testimonials Section -->
+  <section id="testimonials" class="sg-testimonials-section">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="label">Success Stories</span>
+        <h2 class="sg-testimonials-headline">WHAT <span class="highlight">MY CLIENTS</span> SAY</h2>
+        <p class="sg-testimonials-sub">Every person here came in with a goal and left with a result. No fluff, no
+          shortcuts just a plan that works and a coach who shows up every single week.</p>
+      </div>
+    </div>
+
+    <!-- Row 1: Scroll Left -->
+    <div class="sg-testimonials-row mb-6">
+      <div class="sg-testimonials-track scroll-left">
+        <!-- Testimonial Card 1 -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "SGF changed everything for me. The coaches actually care about your form and progress. I've gotten stronger
+            than I ever thought possible."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r1.jpg" alt="Keisha T." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Keisha T.</h4>
+              <p class="sg-testimonial-meta">Member since 2021</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 2 -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "This isn't just a gym—it's a family. Everyone pushes each other to be better. The community here is unlike
+            anything I've experienced."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r2.jpg" alt="Jasmine R." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Jasmine R.</h4>
+              <p class="sg-testimonial-meta">Member since 2022</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 3 -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "Steady wins the race. That's what they teach here, and it works. Consistent progress, no burnout, real
+            results that stick."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r3.jpg" alt="Monique K." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Monique K.</h4>
+              <p class="sg-testimonial-meta">Member since 2020</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 4 -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "I was intimidated at first, but the coaches made me feel welcome from day one. Now I can't imagine training
+            anywhere else."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r4.jpg" alt="Alicia M." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Alicia M.</h4>
+              <p class="sg-testimonial-meta">Member since 2023</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 5 -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "The programming is next level. Every workout has a purpose. I've seen more gains in one year here than five
+            years at other gyms."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r5.jpg" alt="Shanice W." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Shanice W.</h4>
+              <p class="sg-testimonial-meta">Member since 2021</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 6 -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "No excuses, just results. The accountability here keeps me coming back. Best investment I've ever made in
+            myself."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r6.jpg" alt="Tanya P." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Tanya P.</h4>
+              <p class="sg-testimonial-meta">Member since 2022</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DUPLICATES FOR SEAMLESS LOOP -->
+
+        <!-- Testimonial Card 1 Duplicate -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "SGF changed everything for me. The coaches actually care about your form and progress. I've gotten stronger
+            than I ever thought possible."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r1.jpg" alt="Keisha T." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Keisha T.</h4>
+              <p class="sg-testimonial-meta">Member since 2021</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 2 Duplicate -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "This isn't just a gym—it's a family. Everyone pushes each other to be better. The community here is unlike
+            anything I've experienced."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r2.jpg" alt="Jasmine R." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Jasmine R.</h4>
+              <p class="sg-testimonial-meta">Member since 2022</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 3 Duplicate -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "Steady wins the race. That's what they teach here, and it works. Consistent progress, no burnout, real
+            results that stick."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r3.jpg" alt="Monique K." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Monique K.</h4>
+              <p class="sg-testimonial-meta">Member since 2020</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 4 Duplicate -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "I was intimidated at first, but the coaches made me feel welcome from day one. Now I can't imagine training
+            anywhere else."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r4.jpg" alt="Alicia M." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Alicia M.</h4>
+              <p class="sg-testimonial-meta">Member since 2023</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 5 Duplicate -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "The programming is next level. Every workout has a purpose. I've seen more gains in one year here than five
+            years at other gyms."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r5.jpg" alt="Shanice W." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Shanice W.</h4>
+              <p class="sg-testimonial-meta">Member since 2021</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 6 Duplicate -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "No excuses, just results. The accountability here keeps me coming back. Best investment I've ever made in
+            myself."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r6.jpg" alt="Tanya P." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Tanya P.</h4>
+              <p class="sg-testimonial-meta">Member since 2022</p>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
+    <!-- Row 2: Scroll Right -->
+    <div class="sg-testimonials-row">
+      <div class="sg-testimonials-track scroll-right">
+        <!-- Testimonial Card 6 -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "No excuses, just results. The accountability here keeps me coming back. Best investment I've ever made in
+            myself."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r6.jpg" alt="Tanya P." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Tanya P.</h4>
+              <p class="sg-testimonial-meta">Member since 2022</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 5 -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "The programming is next level. Every workout has a purpose. I've seen more gains in one year here than five
+            years at other gyms."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r5.jpg" alt="Shanice W." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Shanice W.</h4>
+              <p class="sg-testimonial-meta">Member since 2021</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 4 -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "I was intimidated at first, but the coaches made me feel welcome from day one. Now I can't imagine training
+            anywhere else."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r4.jpg" alt="Alicia M." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Alicia M.</h4>
+              <p class="sg-testimonial-meta">Member since 2023</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 3 -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "Steady wins the race. That's what they teach here, and it works. Consistent progress, no burnout, real
+            results that stick."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r3.jpg" alt="Monique K." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Monique K.</h4>
+              <p class="sg-testimonial-meta">Member since 2020</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 2 -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "This isn't just a gym—it's a family. Everyone pushes each other to be better. The community here is unlike
+            anything I've experienced."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r2.jpg" alt="Jasmine R." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Jasmine R.</h4>
+              <p class="sg-testimonial-meta">Member since 2022</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 1 -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "SGF changed everything for me. The coaches actually care about your form and progress. I've gotten stronger
+            than I ever thought possible."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r1.jpg" alt="Keisha T." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Keisha T.</h4>
+              <p class="sg-testimonial-meta">Member since 2021</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DUPLICATES FOR SEAMLESS LOOP -->
+
+        <!-- Testimonial Card 6 Duplicate -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "No excuses, just results. The accountability here keeps me coming back. Best investment I've ever made in
+            myself."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r6.jpg" alt="Tanya P." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Tanya P.</h4>
+              <p class="sg-testimonial-meta">Member since 2022</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 5 Duplicate -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "The programming is next level. Every workout has a purpose. I've seen more gains in one year here than five
+            years at other gyms."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r5.jpg" alt="Shanice W." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Shanice W.</h4>
+              <p class="sg-testimonial-meta">Member since 2021</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 4 Duplicate -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "I was intimidated at first, but the coaches made me feel welcome from day one. Now I can't imagine training
+            anywhere else."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r4.jpg" alt="Alicia M." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Alicia M.</h4>
+              <p class="sg-testimonial-meta">Member since 2023</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 3 Duplicate -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "Steady wins the race. That's what they teach here, and it works. Consistent progress, no burnout, real
+            results that stick."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r3.jpg" alt="Monique K." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Monique K.</h4>
+              <p class="sg-testimonial-meta">Member since 2020</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 2 Duplicate -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "This isn't just a gym—it's a family. Everyone pushes each other to be better. The community here is unlike
+            anything I've experienced."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r2.jpg" alt="Jasmine R." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Jasmine R.</h4>
+              <p class="sg-testimonial-meta">Member since 2022</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 1 Duplicate -->
+        <div class="sg-testimonial-card">
+          <div class="sg-testimonial-stars">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <i class="ph-fill ph-quotes sg-testimonial-quote-icon"></i>
+          <p class="sg-testimonial-text">
+            "SGF changed everything for me. The coaches actually care about your form and progress. I've gotten stronger
+            than I ever thought possible."
+          </p>
+          <div class="sg-testimonial-author">
+            <img src="images/r1.jpg" alt="Keisha T." class="sg-testimonial-avatar">
+            <div class="sg-testimonial-info">
+              <h4 class="sg-testimonial-name">Keisha T.</h4>
+              <p class="sg-testimonial-meta">Member since 2021</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Button -->
+    <div class="text-center mt-12 mb-4">
+      <a href="#contact" class="sg-testimonials-cta">Join the Community</a>
     </div>
   </section>
 
-  <!-- Section 4: Pricing -->
-  <section id="pricing" class="section section-light">
+  <!-- Stop Waiting Start Grinding CTA Banner Section -->
+  <section class="sg-cta-banner reveal">
+    <div class="sg-cta-banner-content">
+      <span class="sg-cta-banner-tag">Limited Coaching Spots Available</span>
+      <h2 class="sg-cta-banner-title">STOP WAITING.<br><span class="highlight-orange">START TRANSFORMING.</span></h2>
+      <p class="sg-cta-banner-text">Book your free intro today and find out what training under an IFBB Pro actually
+        feels like. No commitment, no pressure just an honest conversation about your goals.</p>
+      <a href="#contact" class="sg-banner-btn">Book Your Free Intro <i class="ph ph-arrow-right"></i></a>
+      <span class="sg-cta-banner-motto">"Dedication. Discipline. Determination." — Michael Lynn</span>
+    </div>
+  </section>
+
+  <!-- Pricing Plans -->
+  <section id="pricing" class="section">
     <div class="container">
-      <div class="text-center">
-        <span class="label">Invest In Yourself</span>
-        <h2>Coaching Plans</h2>
+      <div class="text-center reveal">
+        <span class="label">What We Work On</span>
+        <h2>Three Ways to Train With<span class="highlight"> Michael</span></h2>
+        <p>Choose the training duration that fits your goals. Longer commits qualify for premium rate packages.</p>
       </div>
 
-      <div class="pricing-toggle">
-        <button class="toggle-btn active" data-plan="monthly">Monthly</button>
-        <button class="toggle-btn" data-plan="3month">3 Months</button>
-        <button class="toggle-btn" data-plan="6month">6 Months</button>
+      <div class="pricing-toggle reveal">
+        <button class="toggle-btn active" data-plan="monthly">Monthly Rate</button>
+        <button class="toggle-btn" data-plan="3month">3-Month Prep</button>
+        <button class="toggle-btn" data-plan="6month">6-Month Transformation</button>
       </div>
 
       <div class="pricing-grid">
-        <div class="price-card">
+        <!-- Basic Plan -->
+        <div class="price-card reveal-left">
           <div class="price-header">
-            <h3>Basic Plan</h3>
-            <div class="price-value" id="price-basic">$199<span>/mo</span></div>
+            <span class="price-tag-label">In-Person Training</span>
+            <h3>1-on-1 Training in Manhattan</h3>
+            <div class="price-value" id="price-basic">$150<span>/mo</span></div>
           </div>
+          <p class="price-description">Train side by side with an IFBB Pro in New York City. Sessions are fully tailored
+            technique, tempo, and intensity dialed in for your exact goals. No guesswork. No wasted reps.</p>
           <ul class="price-features">
-            <li><i class="ph ph-check"></i> Custom Workout Plan</li>
-            <li><i class="ph ph-check"></i> Basic Diet Guidance</li>
-            <li><i class="ph ph-check"></i> Bi-weekly Check-ins</li>
-            <li><i class="ph ph-check"></i> App Access</li>
+            <li><i class="ph-bold ph-caret-right"></i> Custom Hypertrophy Program</li>
+            <li><i class="ph-bold ph-caret-right"></i> Meal Structure Guidance</li>
+            <li><i class="ph-bold ph-caret-right"></i> Bi-Weekly Dashboard Check-ins</li>
+            <li><i class="ph-bold ph-caret-right"></i> Exercise Video Reviews</li>
           </ul>
-          <a href="#" class="btn btn-secondary">Start Now</a>
+          <a href="#contact" class="btn btn-secondary" onclick="selectTrainingType('in-person')">Book a Session</a>
         </div>
 
-        <div class="price-card popular">
+        <!-- Standard Plan (Popular) -->
+        <div class="price-card popular reveal-scale">
           <div class="badge">Most Popular</div>
           <div class="price-header">
-            <h3>Standard Plan</h3>
+            <span class="price-tag-label">Online Coaching</span>
+            <h3>World-Class Coaching, Wherever You Are</h3>
             <div class="price-value" id="price-standard">$299<span>/mo</span></div>
           </div>
+          <p class="price-description">Custom training and nutrition programs built around your schedule, equipment, and
+            lifestyle. Weekly check-ins keep you accountable and the plan evolving with your progress.</p>
           <ul class="price-features">
-            <li><i class="ph ph-check"></i> Custom Workout Plan</li>
-            <li><i class="ph ph-check"></i> Precise Diet & Macros</li>
-            <li><i class="ph ph-check"></i> Weekly Check-ins</li>
-            <li><i class="ph ph-check"></i> Progress Tracking</li>
-            <li><i class="ph ph-check"></i> Daily Support</li>
+            <li><i class="ph-bold ph-caret-right"></i> Custom Hypertrophy &amp; Cardio Protocol</li>
+            <li><i class="ph-bold ph-caret-right"></i> Precise Custom Macros &amp; Meal Plans</li>
+            <li><i class="ph-bold ph-caret-right"></i> Weekly 1-on-1 Review check-ins</li>
+            <li><i class="ph-bold ph-caret-right"></i> Unlimited Video Form Feedback</li>
           </ul>
-          <a href="#" class="btn btn-primary">Start Now</a>
+          <a href="#contact" class="btn btn-primary" onclick="selectTrainingType('online-coaching')">Start Online
+            Coaching</a>
         </div>
 
-        <div class="price-card">
+        <!-- Premium VIP Plan -->
+        <div class="price-card reveal-right">
           <div class="price-header">
-            <h3>Premium (1-on-1)</h3>
+            <span class="price-tag-label">Contest Prep</span>
+            <h3>Stage-Ready Prep from an IFBB Pro</h3>
             <div class="price-value" id="price-premium">$899<span>/mo</span></div>
           </div>
+          <p class="price-description">Mike has stood on the NPC and IFBB Pro stage himself. He knows exactly what it
+            takes to peak at the right time macros, conditioning, posing, and the mental side of competing.</p>
           <ul class="price-features">
-            <li><i class="ph ph-check"></i> Complete Online Coaching</li>
-            <li><i class="ph ph-check"></i> 4x In-Person NYC Sessions</li>
-            <li><i class="ph ph-check"></i> Video Form Review</li>
-            <li><i class="ph ph-check"></i> Direct Phone Access</li>
+            <li><i class="ph-bold ph-caret-right"></i> Complete Elite Online Coaching Features</li>
+            <li><i class="ph-bold ph-caret-right"></i> 4x 1-on-1 In-Person Sessions</li>
+            <li><i class="ph-bold ph-caret-right"></i> Custom Nutrition, Supplementation, Lifestyle</li>
+            <li><i class="ph-bold ph-caret-right"></i> Direct 1-on-1 Phone Call Check-ins</li>
           </ul>
-          <a href="#" class="btn btn-secondary">Start Now</a>
+          <a href="#contact" class="btn btn-secondary" onclick="selectTrainingType('contest-prep')">Start Contest
+            Prep</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 5: About Coach -->
-  <section id="about" class="section">
-    <div class="container about-grid">
-      <div class="about-image">
-        <img src="images/michael-lynn-about.jpg" alt="Michael Lynn">
-      </div>
-      <div class="about-content">
-        <span class="label">About</span>
-        <h2>Michael Lynn</h2>
-        <p>I didn't start with elite genetics. My physique was built through years of relentless dedication, trial and
-          error, and studying the science of human performance.</p>
-        <p>Now as an IFBB Pro, my mission is to cut through the noise and provide you with the exact blueprint I use to
-          achieve peak physical condition. No gimmicks, just hard work and an optimal strategy.</p>
-        <div class="credentials">
-          <div class="cred-item">
-            <h4>IFBB Pro</h4>
-            <p>Bodybuilder</p>
-          </div>
-          <div class="cred-item">
-            <h4>10+</h4>
-            <p>Years Exp.</p>
-          </div>
-          <div class="cred-item">
-            <h4>200+</h4>
-            <p>Clients</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Section 6: How It Works -->
-  <section class="section section-light">
+
+
+  <!-- Process Steps -->
+  <section class="section section-light sg-protocol-section">
     <div class="container">
-      <div class="text-center">
+      <div class="text-center reveal">
         <span class="label">The Process</span>
-        <h2>How It Works</h2>
+        <h2>From Inquiry to Transformation in<br><span class="highlight"> 4 Simple Steps</span></h2>
+        <p>Mike's coaching is intentionally lean: no bloated onboarding, no redundant modules. Just a clear, fast track
+          to results.</p>
       </div>
       <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-number">1</div>
+        <!-- Step 1 -->
+        <div class="step-card reveal-left">
+          <div class="step-number">01</div>
           <h3>Apply</h3>
-          <p>Fill out the intake form so I can understand your goals.</p>
+          <p>Fill out the intake form so Mike understands your history, goals, and schedule.</p>
         </div>
-        <div class="step-card">
-          <div class="step-number">2</div>
-          <h3>Get Custom Plan</h3>
-          <p>Receive your completely personalized training protocol.</p>
+        <!-- Step 2 -->
+        <div class="step-card reveal-scale" style="transition-delay: 0.1s;">
+          <div class="step-number">02</div>
+          <h3>Intro Call</h3>
+          <p>A quick call to align on the plan no obligation no hard sell.</p>
         </div>
-        <div class="step-card">
-          <div class="step-number">3</div>
-          <h3>Weekly Coaching</h3>
-          <p>Execute the plan and we tune it weekly via check-ins.</p>
+        <!-- Step 3 -->
+        <div class="step-card reveal-scale" style="transition-delay: 0.2s;">
+          <div class="step-number">03</div>
+          <h3>Your Plan is Built</h3>
+          <p>Fully custom training and nutrition delivered within 48 hours of your first check-in.</p>
         </div>
-        <div class="step-card">
-          <div class="step-number">4</div>
-          <h3>Transform</h3>
-          <p>Achieve your final form and shatter your limitations.</p>
+        <!-- Step 4 -->
+        <div class="step-card reveal-right">
+          <div class="step-number">04</div>
+          <h3>Execute and Evolve</h3>
+          <p>Weekly check-ins keep the program sharp and your results coming.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 7: Results -->
-  <section id="results" class="section" style="background: var(--bg-primary);">
-    <div class="container stats-grid">
+  <!-- YouTube Video & Channel Section -->
+  <section id="youtube-section" class="section">
+    <div class="container">
+      <!-- Centered Header -->
+      <div class="text-center reveal">
+        <span class="youtube-tag">FREE CONTENT</span>
+        <h2 class="youtube-main-title">Watch & <span class="highlight">Learn</span></h2>
+        <p class="youtube-subtitle">
+          Get free fitness tips, workout tutorials, and nutrition advice on my YouTube channel. New videos every week.
+        </p>
+      </div>
+
+      <!-- Centered Native-Style Card -->
+      <div class="youtube-widget-card reveal-scale">
+        <!-- Video Embed -->
+        <div class="youtube-video-frame">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/EM2z6RZDOno?si=mbs90w0MjcI_K0pW"
+              title="Michael Lynn STAY STRONG YouTube Video" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Bottom Native-Style Subscriber Bar -->
+        <div class="youtube-subscriber-bar">
+          <div class="youtube-channel-info">
+            <div class="youtube-avatar-wrapper">
+              <i class="ph-fill ph-youtube-logo"></i>
+            </div>
+            <div class="youtube-meta">
+              <h4>Michael Lynn</h4>
+              <p class="youtube-handle">@mikelynnstaystrong9744</p>
+            </div>
+          </div>
+          <a href="https://www.youtube.com/@mikelynnstaystrong9744" target="_blank" rel="noopener noreferrer"
+            class="youtube-native-subscribe-btn">
+            <i class="ph-fill ph-youtube-logo"></i> Subscribe
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Rows Counter Section -->
+  <section id="results" class="stats-section section">
+    <div class="container stats-grid reveal">
       <div class="stat-item">
-        <h3 class="counter" data-target="200">0</h3>
+        <h3><span class="counter" data-target="200">0</span>+</h3>
         <p>Clients Transformed</p>
       </div>
       <div class="stat-item">
-        <h3 class="counter" data-target="10">0</h3>
+        <h3><span class="counter" data-target="25">0</span>+</h3>
         <p>Years Experience</p>
       </div>
       <div class="stat-item">
-        <h3><span class="counter" data-target="4">0</span>.<span class="counter" data-target="9">0</span></h3>
-        <p>Star Rating</p>
+        <h3><span class="counter" data-target="5">0</span>.<span class="counter" data-target="0">0</span></h3>
+        <p>Coaching Rating</p>
       </div>
     </div>
   </section>
 
-  <!-- Section 8: Transformation Results -->
-  <section class="section section-light">
+  <!-- Contact & Scheduler Section -->
+  <section id="contact" class="section">
     <div class="container">
-      <div class="text-center" style="margin-bottom: var(--space-6);">
-        <h2 style="font-size: 56px; margin-bottom: 8px;">200+ Transformations</h2>
-        <p style="color: #B3B3B3; font-size: 18px; margin: 0;">Real clients. Real results.</p>
-      </div>
-
-      <div class="horizontal-scroll-container">
-        <!-- Card 1 -->
-        <div class="transform-card">
-          <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=800&auto=format&fit=crop"
-            alt="Transformation Result">
-          <div class="transform-overlay">
-            <div class="transform-top">
-              <span class="transform-metric">-12 kg</span>
-              <span class="transform-label">FAT LOSS</span>
-            </div>
-            <div class="transform-bottom">
-              <p class="transform-text">Lost 12 kg in 16 weeks and built confidence again.</p>
-              <div class="transform-client">Age 34 &bull; Beginner</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="transform-card">
-          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop"
-            alt="Transformation Result">
-          <div class="transform-overlay">
-            <div class="transform-top">
-              <span class="transform-metric">+5 kg Muscle</span>
-              <span class="transform-label">MUSCLE GAIN</span>
-            </div>
-            <div class="transform-bottom">
-              <p class="transform-text">Packed on dense tissue with a strict caloric surplus.</p>
-              <div class="transform-client">Age 28 &bull; Intermediate</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="transform-card">
-          <img src="https://images.unsplash.com/photo-1526401485004-46910ecc8e51?q=80&w=800&auto=format&fit=crop"
-            alt="Transformation Result">
-          <div class="transform-overlay">
-            <div class="transform-top">
-              <span class="transform-metric">Body Fat -10%</span>
-              <span class="transform-label">RECOMPOSITION</span>
-            </div>
-            <div class="transform-bottom">
-              <p class="transform-text">Shed stubborn fat while maintaining all strength.</p>
-              <div class="transform-client">Age 41 &bull; Advanced</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="transform-card">
-          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=800&auto=format&fit=crop"
-            alt="Transformation Result">
-          <div class="transform-overlay">
-            <div class="transform-top">
-              <span class="transform-metric">1st Place</span>
-              <span class="transform-label">CONTEST PREP</span>
-            </div>
-            <div class="transform-bottom">
-              <p class="transform-text">Pushed past barriers to claim overall stage victory.</p>
-              <div class="transform-client">Age 24 &bull; Competitor</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 9: Testimonials -->
-  <section id="testimonials" class="section"
-    style="background: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop') center/cover; position: relative;">
-    <div
-      style="position: absolute; inset:0; background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(11,11,11,0.8) 50%, var(--bg-primary) 100%);">
-    </div>
-    <div class="container" style="position: relative; z-index: 2;">
-      <div class="text-center">
-        <span class="label">Client Reviews</span>
-        <h2>What They Say</h2>
-      </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
-              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
-          <p class="testimonial-text">"Michael's approach is fully dialed in. If you follow what he says, you will
-            transform. Period. Best investment I've made."</p>
-          <div class="author">
-            <img
-              src="C:/Users/SANTOSH/.gemini/antigravity/brain/14cfaa07-bea8-4f1a-a6f3-56c7639663a3/testimonial_avatar_1776158668602.png"
-              alt="James R.">
-            <div class="author-info">
-              <h4>James R.</h4>
-              <p>Dropped 20lbs of fat</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
-              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
-          <p class="testimonial-text">"His attention to detail on form and macros is incredible. He's not just giving a
-            template; it's true coaching."</p>
-          <div class="author">
-            <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=200&q=80&fit=crop" alt="Marcus T.">
-            <div class="author-info">
-              <h4>Marcus T.</h4>
-              <p>Competition Prep</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
-              class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
-          <p class="testimonial-text">"I struggled for years before hiring Michael. In 3 months I accomplished what I
-            couldn't in 3 years."</p>
-          <div class="author">
-            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80&fit=crop" alt="Alex H.">
-            <div class="author-info">
-              <h4>Alex H.</h4>
-              <p>Recomp Phase</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 10: FAQ -->
-  <section id="faq" class="section section-light">
-    <div class="container">
-      <div class="text-center">
-        <span class="label">Questions</span>
-        <h2>Frequently Asked Questions</h2>
-      </div>
-      <div class="faq-container">
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>Is this suitable for beginners?</h3>
-            <i class="ph ph-plus faq-icon"></i>
-          </div>
-          <div class="faq-answer">
-            <p>Absolutely. While I coach IFBB Pros, the majority of my clients are everyday people looking to make a
-              massive change.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>Do I need an expensive gym membership?</h3>
-            <i class="ph ph-plus faq-icon"></i>
-          </div>
-          <div class="faq-answer">
-            <p>A standard gym is recommended. However, if you only have a home gym, I will customize the entire block to
-              utilize what you have.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>How fast will I see results?</h3>
-            <i class="ph ph-plus faq-icon"></i>
-          </div>
-          <div class="faq-answer">
-            <p>If you adhere 100% to the plan, visual changes often begin within 2-3 weeks, with major transformations
-              visible by weeks 10-12.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">
-            <h3>Do I have to eat bland food?</h3>
-            <i class="ph ph-plus faq-icon"></i>
-          </div>
-          <div class="faq-answer">
-            <p>No. I utilize sustainable dieting practices. Macros will be tailored and you will have flexibility as
-              long as targets are hit.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 11: Contact Form -->
-  <section id="contact" class="section section-light">
-    <div class="container">
-      <div class="text-center">
-        <span class="label">Get In Touch</span>
-        <h2>Start Your Journey</h2>
-        <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto var(--space-6);">Fill out the form
-          below and I'll get back to you within 24 hours to discuss your fitness goals.</p>
-      </div>
-
       <div class="contact-grid">
-        <!-- Contact Info -->
-        <div class="contact-info">
-          <div class="contact-card">
-            <div class="contact-icon">
-              <i class="ph-fill ph-envelope"></i>
+        <!-- Contact Information Details & Heading -->
+        <div style="display: flex; flex-direction: column; justify-content: flex-start;">
+          <div class="text-left reveal" style="margin-bottom: 32px;">
+            <div style="margin-bottom: 12px;">
+              <span class="sg-cta-banner-tag"
+                style="color: var(--orange); font-weight: 700; letter-spacing: 2px; margin-bottom: 0;">START YOUR
+                JOURNEY</span>
             </div>
-            <h4>Email</h4>
-            <p>info@michaellynn.com</p>
+            <h2
+              style="font-family: var(--font-heading); font-size: clamp(36px, 5.5vw, 56px); font-weight: 900; line-height: 1.1; text-transform: uppercase; color: #000; background: none; -webkit-background-clip: unset; -webkit-text-fill-color: #000; margin-bottom: 24px; display: block;">
+              BOOK YOUR <br><span style="color: var(--orange);">FREE INTRO</span>
+            </h2>
+            <p style="font-size: 16px; color: #444444; line-height: 1.6; font-weight: 400; margin-bottom: 0;">
+              No pressure. No gimmicks. Just come in, train, and see what we're about. Fill out the form and we'll reach
+              out to schedule your free consultation.
+            </p>
           </div>
-          <div class="contact-card">
-            <div class="contact-icon">
-              <i class="ph-fill ph-phone"></i>
+          <div class="contact-info reveal-left" style="display: flex; flex-direction: column; gap: 24px;">
+            <!-- Location -->
+            <div class="sg-contact-item" style="display: flex; align-items: center; gap: 16px;">
+              <div
+                style="background: #000000; border-radius: 12px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="ph ph-map-pin ph-fill" style="color: var(--orange); font-size: 20px;"></i>
+              </div>
+              <div>
+                <h4
+                  style="font-family: var(--font-heading); font-size: 15px; font-weight: 800; color: #000000; text-transform: uppercase; margin: 0 0 2px 0; letter-spacing: 0.5px;">
+                  Location</h4>
+                <p style="font-size: 14px; color: #555555; margin: 0; font-weight: 500;">Manhattan, New York City</p>
+              </div>
             </div>
-            <h4>Phone</h4>
-            <p>+1 (555) 123-4567</p>
+            <!-- Email -->
+            <div class="sg-contact-item" style="display: flex; align-items: center; gap: 16px;">
+              <div
+                style="background: #000000; border-radius: 12px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="ph ph-envelope ph-fill" style="color: var(--orange); font-size: 20px;"></i>
+              </div>
+              <div>
+                <h4
+                  style="font-family: var(--font-heading); font-size: 15px; font-weight: 800; color: #000000; text-transform: uppercase; margin: 0 0 2px 0; letter-spacing: 0.5px;">
+                  Email</h4>
+                <a href="mailto:mikesnyc3@gmail.com"
+                  style="font-size: 14px; color: #555555; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">mikesnyc3@gmail.com</a>
+              </div>
+            </div>
+            <!-- Response time -->
+            <div class="sg-contact-item" style="display: flex; align-items: center; gap: 16px;">
+              <div
+                style="background: #000000; border-radius: 12px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="ph ph-clock ph-fill" style="color: var(--orange); font-size: 20px;"></i>
+              </div>
+              <div>
+                <h4
+                  style="font-family: var(--font-heading); font-size: 15px; font-weight: 800; color: #000000; text-transform: uppercase; margin: 0 0 2px 0; letter-spacing: 0.5px;">
+                  RESPONSE TIME</h4>
+                <a
+                  style="font-size: 14px; color: #555555; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">24
+                  HOURS</a>
+              </div>
+            </div>
+            <!-- Instagram -->
+            <div class="sg-contact-item" style="display: flex; align-items: center; gap: 16px;">
+              <div
+                style="background: #000000; border-radius: 12px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="ph ph-instagram-logo" style="color: var(--orange); font-size: 20px;"></i>
+              </div>
+              <div>
+                <h4
+                  style="font-family: var(--font-heading); font-size: 15px; font-weight: 800; color: #000000; text-transform: uppercase; margin: 0 0 2px 0; letter-spacing: 0.5px;">
+                  Instagram</h4>
+                <a href="https://www.instagram.com/mikelynnifbbpro/" target="_blank"
+                  style="font-size: 14px; color: var(--orange); text-decoration: none; font-weight: 600; transition: opacity 0.3s ease;">@mikelynnifbbpro</a>
+              </div>
+            </div>
           </div>
-          <div class="contact-card">
-            <div class="contact-icon">
-              <i class="ph-fill ph-map-pin"></i>
-            </div>
-            <h4>Location</h4>
-            <p>New York, NY</p>
-          </div>
-          <div class="contact-card">
-            <div class="contact-icon">
-              <i class="ph-fill ph-clock"></i>
-            </div>
-            <h4>Response Time</h4>
-            <p>Within 24 hours</p>
+
+          <!-- Google Map Embed -->
+          <div class="contact-map reveal-left"
+            style="margin-top: 32px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 8px 30px rgba(0,0,0,0.05); height: 320px;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96708.3537723209!2d-74.0516320379617!3d40.75903219736855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2588f046ee661%3A0xa0b3281fcecc08c!2sManhattan%2C%20New%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1780123423817!5m2!1sen!2sin"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
         </div>
 
-        <!-- Contact Form -->
-        <div class="contact-form-wrapper">
-          <form id="contactForm" class="contact-form">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Full Name *</label>
-                <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
-              </div>
+        <!-- Contact Intake Form -->
+        <div class="contact-form-wrapper reveal-right">
+          <form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="326c4fd1-d979-4dce-89f3-a44bb19feec1">
+            <!-- <div style="text-align: center; margin-bottom: 30px;">
+              <img src="images/logo.png" alt="Michael Lynn | Stay Strong"
+                style="height: 48px; width: auto; display: inline-block; object-fit: contain;">
+            </div> -->
+            <div class="form-group" style="margin-top: 80px;">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="e.g. John Doe" required>
             </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (555) 000-0000">
-              </div>
-              <div class="form-group">
-                <label for="goal">Your Goal *</label>
-                <select id="goal" name="goal" class="form-input" required>
-                  <option value="">Select your goal...</option>
-                  <option value="weight-loss">Weight Loss</option>
-                  <option value="muscle-gain">Muscle Building</option>
-                  <option value="contest-prep">Contest Prep</option>
-                  <option value="transformation">Complete Transformation</option>
-                  <option value="maintenance">Maintenance</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="appointmentDate">Select Date *</label>
-                <input type="date" id="appointmentDate" name="appointmentDate" class="form-input" required>
-              </div>
-              <div class="form-group">
-                <label>Available Slots *</label>
-                <div class="time-slots-container">
-                  <div class="time-slots-grid" id="timeSlotsGrid">
-                    <div class="slots-placeholder">Please select a date first</div>
-                  </div>
-                  <input type="hidden" id="selectedTime" name="selectedTime" required>
-                </div>
-              </div>
-            </div>
-
             <div class="form-group">
-              <label for="message">Tell Me About Yourself *</label>
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="e.g. john@gmail.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="e.g. +1 (555) 000-0000">
+            </div>
+            <div class="form-group">
+              <label for="training-type">Preferred Training Type *</label>
+              <select id="training-type" name="training_type" class="form-input" required>
+                <option value="">Select training type...</option>
+                <option value="in-person">In-Person Training</option>
+                <option value="online-coaching">Online Coaching</option>
+                <option value="contest-prep">Contest Prep</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="goal">Your Primary Goal *</label>
+              <select id="goal" name="goal" class="form-input" required>
+                <option value="">Select training focus...</option>
+                <option value="weight-loss">Fat Loss Recomp</option>
+                <option value="muscle-gain">Muscle Hypertrophy</option>
+                <option value="contest-prep">Contest Physique Prep</option>
+                <option value="transformation">VIP In-Person Training</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Tell Coach Mike About Yourself *</label>
               <textarea id="message" name="message" class="form-input form-textarea"
-                placeholder="Share your fitness history, current routine, diet, and what you hope to achieve..."
-                rows="5" required></textarea>
+                placeholder="Briefly detail your fitness background, injuries, nutrition constraints, and what you aim to conquer..."
+                required></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary btn-submit">
-              <span class="btn-text">Book Appointment</span>
-              <span class="btn-loading" style="display: none;"><i class="ph ph-spinner ph-spin"></i> Processing...</span>
-              <span class="btn-success" style="display: none;"><i class="ph ph-check-circle"></i> Appointment Booked!</span>
+              <span class="btn-text">Book Your Free Intro</span>
+              <span class="btn-loading" style="display: none;"><i class="ph ph-spinner ph-spin"></i>
+                Submitting...</span>
+              <span class="btn-success" style="display: none;"><i class="ph ph-check-circle"></i> Message Sent!</span>
             </button>
           </form>
         </div>
@@ -647,71 +1141,205 @@
     </div>
   </section>
 
-  <!-- Section 12: Final CTA -->
-  <section class="cta-section">
+  <!-- Media Gallery (Masonry Style) -->
+  <section id="gallery" class="section section-light gallery-section">
     <div class="container">
-      <h2>Your Transformation Starts Today</h2>
-      <p>Limited coaching slots available.</p>
-      <a href="#pricing" class="btn btn-primary" style="margin-top: var(--space-4);">Join Coaching Now</a>
+      <div class="text-center reveal">
+        <span class="label">Gallery</span>
+        <h2>STAY <span class="highlight">STRONG</span> GALLERY</h2>
+        <p>A visual look at IFBB Pro Michael Lynn's competitive history, coaching sessions, and client execution.</p>
+      </div>
+
+      <div class="gallery-masonry reveal-scale">
+        <!-- Item 1: Video -->
+        <div class="gallery-item video-item">
+          <video autoplay loop muted playsinline>
+            <source src="images/v1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Item 2: Image -->
+        <div class="gallery-item">
+          <img src="images/i1.heic" alt="STAY STRONG Training">
+        </div>
+
+        <!-- Item 3: Image -->
+        <div class="gallery-item">
+          <img src="images/i2.heic" alt="STAY STRONG Training">
+        </div>
+
+        <!-- Item 4: Video -->
+        <div class="gallery-item video-item">
+          <video autoplay loop muted playsinline>
+            <source src="images/v2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Item 5: Image -->
+        <div class="gallery-item">
+          <img src="images/i3.jpg" alt="STAY STRONG Training">
+        </div>
+
+        <!-- Item 6: Video -->
+        <div class="gallery-item video-item">
+          <video autoplay loop muted playsinline>
+            <source src="images/v3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <div class="gallery-action text-center reveal" style="margin-top: 48px; display: flex; justify-content: center;">
+        <a href="https://www.instagram.com/mikelynnifbbpro/" target="_blank" rel="noopener noreferrer"
+          class="btn btn-instagram">
+          <i class="ph ph-instagram-logo"></i>
+          Follow for daily training content
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- Section 13: Footer -->
-  <footer class="footer" id="footer">
+
+
+  <!-- FAQ Section Accordions -->
+  <section id="faq" class="section section-light">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="label">Questions</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>Clear, direct answers to common questions regarding the coaching system and protocols.</p>
+      </div>
+
+      <div class="faq-container reveal-scale">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Is this program right for complete beginners?</h3>
+            <i class="ph ph-plus faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely. While I coach IFBB Pro competitors, the majority of my clients are everyday people who are
+              serious about making a real change. If you're willing to put in the work, I'll build the exact plan to get
+              you there.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do I need to be in New York to work with you?</h3>
+            <i class="ph ph-plus faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>No. My online coaching clients are based all over the world. If you're in New York, we can train in
+              person. Anywhere else, everything runs remotely with the same level of coaching quality.
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do I need a fully equipped gym?</h3>
+            <i class="ph ph-plus faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>A commercial gym is recommended, but not required. If you're training at home, I'll build the entire
+              program around what you have available.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How quickly will I see results?</h3>
+            <i class="ph ph-plus faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>If you follow the plan consistently, most clients notice visible changes within 2 to 3 weeks. Major
+              transformations typically happen by weeks 10 to 12.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How do I book an appointment?</h3>
+            <i class="ph ph-plus faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Fill out the contact form on this page and I'll get back to you within 24 hours to schedule your free
+              intro call. Online clients can also book directly through the scheduling tool.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <a href="#" class="footer-logo">Michael <span>Lynn</span></a>
-          <p style="font-size: 14px;">Elite fitness coaching based in NYC, changing lives worldwide.</p>
+          <a href="#" class="sg-logo-link" style="display: inline-block; margin-bottom: 15px;">
+            <img src="images/logo.png" alt="Michael Lynn | Stay Strong" class="sg-logo-img">
+          </a>
+          <p style="font-size: 13px; color: var(--text-secondary); margin-top: 10px;">IFBB Pro Bodybuilder. NYC Personal
+            Trainer. Online Coach. Changing lives one rep at a time.</p>
           <div class="social-links">
-            <a href="#"><i class="ph ph-instagram-logo"></i></a>
-            <a href="#"><i class="ph ph-youtube-logo"></i></a>
-            <a href="#"><i class="ph ph-tiktok-logo"></i></a>
+            <a href="https://www.instagram.com/mikelynnifbbpro/" target="_blank"><i
+                class="ph ph-instagram-logo"></i></a>
+            <a href="#" target="_blank"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#" target="_blank"><i class="ph ph-tiktok-logo"></i></a>
           </div>
         </div>
         <div class="footer-col">
-          <h4>Navigation</h4>
+          <h4>Navigate</h4>
           <ul>
-            <li><a href="#about">About Michael</a></li>
-            <li><a href="#programs">Programs</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#story">Origin Story</a></li>
+            <li><a href="#philosophy">Our Philosophy</a></li>
+            <li><a href="#programs">Coaching Programs</a></li>
+            <li><a href="#pricing">Plans & Rates</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Resources</h4>
           <ul>
-            <li><a href="#transformations">Gallery</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#gallery">Gallery</a></li>
             <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Book Call</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Contact Information</h4>
+          <h4>Contact & Info</h4>
           <ul>
-            <li><a href="mailto:info@michaellynn.com">info@michaellynn.com</a></li>
-            <li><a href="#">New York, NY</a></li>
+            <li><a href="mailto:info@mikelynnstaystrong.com">info@mikelynnstaystrong.com</a></li>
+            <li><a href="#">Charlotte, North Carolina</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        &copy; 2026 Michael Lynn Fitness. All Rights Reserved.
+        &copy; 2026 Michael Lynn Fitness. All Rights Reserved. Designed for IFBB Pro Michael Lynn.
       </div>
     </div>
   </footer>
 
-  <!-- WhatsApp Floating Button -->
+  <!-- WhatsApp Floating Widget Button -->
   <div class="whatsapp-float" id="whatsappFloat">
     <button class="whatsapp-btn" onclick="toggleWhatsAppPopup()">
-      <i class="ph-fill ph-whatsapp-logo"></i>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="white" width="30" height="30">
+        <path
+          d="M16 0C7.163 0 0 7.163 0 16c0 2.822.736 5.478 2.027 7.785L0 32l8.418-2.004A15.93 15.93 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 0 1-6.747-1.836l-.483-.287-5 1.19 1.22-4.862-.316-.5A13.267 13.267 0 0 1 2.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.3-9.887c-.4-.2-2.364-1.166-2.731-1.3-.366-.133-.633-.2-.9.2s-1.033 1.3-1.266 1.566c-.233.267-.467.3-.867.1-.4-.2-1.688-.622-3.215-1.983-1.188-1.059-1.99-2.367-2.223-2.767-.233-.4-.025-.616.175-.815.18-.18.4-.467.6-.7.2-.233.267-.4.4-.666.133-.267.067-.5-.033-.7-.1-.2-.9-2.166-1.233-2.966-.325-.778-.655-.673-.9-.685l-.766-.013c-.267 0-.7.1-1.067.5S8.4 11.3 8.4 13.267c0 1.967 1.433 3.867 1.633 4.133.2.267 2.82 4.305 6.833 6.034.955.412 1.7.658 2.28.843.958.305 1.83.262 2.52.159.769-.115 2.364-.966 2.697-1.9.333-.933.333-1.733.233-1.9-.1-.167-.366-.267-.766-.467z" />
+      </svg>
     </button>
   </div>
 
-  <!-- WhatsApp Popup -->
+  <!-- WhatsApp Chat Popup -->
   <div class="whatsapp-popup" id="whatsappPopup">
     <div class="whatsapp-popup-header">
       <div class="whatsapp-popup-avatar">
-        <img src="./michael-lynn-about.jpg" alt="Michael Lynn">
+        <img src="images/michael-lynn-about.jpg" alt="Michael Lynn Chat Profile">
         <span class="whatsapp-status"></span>
       </div>
       <div class="whatsapp-popup-info">
@@ -723,8 +1351,8 @@
       </button>
     </div>
     <div class="whatsapp-popup-body">
-      <div class="whatsapp-message received">
-        <p>Hi there! 👋 I'm Michael. How can I help you achieve your fitness goals today?</p>
+      <div class="whatsapp-message">
+        <p>Hey! 👋 Ready to conquer your training goals today? Let me know what questions you have!</p>
         <span class="whatsapp-time">Just now</span>
       </div>
     </div>
@@ -732,12 +1360,12 @@
       <a href="https://wa.me/15551234567?text=Hi%20Michael%2C%20I'm%20interested%20in%20your%20coaching%20program"
         target="_blank" class="whatsapp-start-chat">
         <i class="ph-fill ph-chat-circle-text"></i>
-        Start Chat
+        Start WhatsApp Chat
       </a>
     </div>
   </div>
 
-  <!-- Custom Popup Modal -->
+  <!-- Confirmation Modal -->
   <div class="custom-modal" id="customModal">
     <div class="modal-overlay"></div>
     <div class="modal-card">
@@ -751,11 +1379,6 @@
       <p class="modal-message" id="modalMessage">This is a custom message.</p>
       <button class="btn btn-primary modal-action-btn" id="modalActionBtn">Okay</button>
     </div>
-  </div>
-
-  <!-- Mobile Sticky CTA -->
-  <div class="mobile-sticky-cta">
-    <a href="#pricing" class="btn btn-primary">Start Now</a>
   </div>
 
   <script src="script.js"></script>
